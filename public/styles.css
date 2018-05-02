@@ -1,0 +1,84 @@
+
+@import url('https://fonts.googleapis.com/css?family=Gugi');
+
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 20px;
+  text-align: center;
+}
+
+.header {
+  text-align: center;
+}
+
+.header > p {
+  text-align: center;
+}
+
+body {
+  background: #0e6eb8;
+}
+
+td{
+  text-align: center;
+}
+
+#googlePadding{
+  padding: 20px;
+}
+
+#googleHeader
+{
+  color: yellow;
+}
+
+.ui > p {
+  text-align: center;
+}
+.padding{
+  padding: 10px;
+}
+.padding > h1{
+  text-decoration: underline;
+}
+
+.containerLogo {
+  display: grid;
+  text-align: center;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.containerLogo > p {
+  font-weight: bold;
+}
+
+.size {
+  font-size: 15px;
+  color: #0e6eb8;
+  font-weight: bold;
+}
+
+input{
+  text-align: center;
+}
+
+select { width: 400px; text-align-last:center; }
+
+.container{
+  width: 80%;
+  margin: auto;
+}
+
+#containerDash{
+width: 80%;
+}
+
+
+h1{
+  font-family: 'Gugi', cursive;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}

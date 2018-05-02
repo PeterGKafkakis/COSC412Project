@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+
+  <title>College Advisor</title>
+</head>
+
+<body>
+
+  <div id="div1" class="ui info message">
+    <div class="header">
+      Upcoming Changes in Service
+    </div>
+    <p>We will be adding Registration for students without a GMAIL acccount soon</p>
+    <p><button id="button1" class="ui blue button" style="display: block; margin: 0 auto;">Remove Message</button></p>
+  </div>
+
+  <div class="container">
+
+    <div class="padding">
+      <h1>Be Your Own Advisor</h1>
+      <h1>Graduate On Time</h1>
+    </div>
+
+    <div class="wrapper">
+
+      <div class="ui attached message">
+        <div class="header">
+          Welcome To the Worlds Best College Advisor
+        </div>
+        <p>Fill out the form below to login </p>
+        <p><i class="book extra large icon"></i></p>
+      </div>
+      <form  action="/dashboard" method="post" class="ui form attached fluid segment">
+
+        <div class="field">
+          <label><span class="size">Email</span></label>
+          <input placeholder="School Email @students.towson.edu" type="text">
+        </div>
+        <div class="field">
+          <label><span class="size">Password</span></label>
+          <input type="password">
+        </div>
+        <div class="field">
+        </div>
+        <div class="wrapper">
+          <div class="ui blue submit button">Login</div>
+
+          <p id="googlePadding">
+            <a href="/auth/google" class="ui blue submit button">Login With Google</a>
+          </p>
+
+        </div>
+      </form>
+
+
+      <script>
+        $(document).ready(function() {
+          $("button").click(function() {
+            $("#div1").remove();
+            $("#button1").remove();
+          });
+        });
+      </script>
+
+
+
+
+      <div class="ui blue inverted very padded segment">
+        <div class="containerLogo">
+
+          <p><i class="fas fa-graduation-cap fa-3x"></i></p>
+
+          <p>MAKING ADVISING EASY FOR STUDENTS </p>
+
+          <div class="containerLogo">
+            <p><i class="fab fa-facebook-f fa-3x"></i></p>
+            <p><i class="fab fa-google fa-3x"></i></p>
+            <p><i class="fab fa-twitter fa-3x"></i></p>
+          </div>
+        </div>
+        <p>&copy; 2018 Team Fabulous</p>
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <script src="semantic/dist/semantic.min.js"></script>
+</body>
+
+</html>
