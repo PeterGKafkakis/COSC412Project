@@ -50,6 +50,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 require('./routes/authRoutes')(app);
+//test comment for github
 
 //What Cloud Server Will Use or default port 5000 on Local Machine
 const PORT = process.env.PORT || 5000;
