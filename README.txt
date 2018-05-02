@@ -1,7 +1,8 @@
-For Right Now
-----------------
+COSC412 PROJECT
+------------------
+5 TEAM PROJECT
 
 
-Database User (MLAB)
+USING EJS AS TEMPLATE ENGINE
 
-peterkafkakis (USER)  password (PASSWORD)
+REGISTRATION / GOOGLE OAUTH IMPLEMENTATION
