@@ -49,8 +49,9 @@
     <h2 class="ui header">College Advisor</h2>
     <h2 class="ui header blue"><u> Computer Science Major </u> </h2>
 
-    <div class="scroll">
-      <form method="post">
+
+    <form id="dashForm" method="post">
+      <div class="scroll">
         <table class="ui fixed single line celled table">
           <thead>
             <tr class="center aligned">
@@ -625,8 +626,17 @@
             </tr>
           </tbody>
         </table>
-      </form>
+      </div>
+    </form>
+
+    <div class="center">
+      <div class="ui buttons">
+        <button form="dashForm" class="ui button">Save</button>
+        <div class="or"></div>
+        <button form="dashForm" class="ui blue button">Submit</button>
+      </div>
     </div>
+
   </div>
 
 

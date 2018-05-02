@@ -37,8 +37,17 @@ body {
   background: #0e6eb8;
 }
 
+.center{
+  text-align: center;
+  margin-top: 20px;
+}
 td{
   text-align: center;
+}
+
+.ui.buttons.padding{
+margin: 0 auto;
+
 }
 
 #googlePadding{
