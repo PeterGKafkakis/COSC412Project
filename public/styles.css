@@ -9,8 +9,18 @@
   text-align: center;
 }
 
+.tableHeader{
+  display: grid;
+  grid-template-columns: 1fr;
+  text-align: center;
+}
+
 .header {
   text-align: center;
+}
+
+.center.aligned.pfont{
+  font-size: 15px;
 }
 
 .scroll
