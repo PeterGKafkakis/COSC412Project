@@ -52,10 +52,29 @@
             <div class="field">
                 <label>Send us a message</label>
                 <div class="width">
-                <textarea rows="3" cols="1"></textarea>
+                <textarea rows="3" id="area"></textarea>
                 </div>
             </div>
-            <div class="ui button" tabindex="0">Submit</div>
+            <script>
+                var switchState = function(){
+                    document.getElementById("msg").hidden= false;
+                    document.getElementById("area").value="";
+                }
+            </script>
+            <div class="ui button" tabindex="0" onclick="switchState()">Submit</div>
+            <br>
+            <br>
+            <div class="ui form" hidden="true" id="msg">
+                <div class="width">
+                <div class="ui message">
+                    <div class="header">Your message successfully sent!</div>
+                    <ul class="list">
+                        <li>Please allow up to 2 days for response time.</li>
+                        <li>Any vulgar messages will result in an IP-ban.</li>
+                    </ul>
+                </div>
+                </div>
+            </div>
         </div>
         <br>
         <br>
