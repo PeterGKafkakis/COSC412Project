@@ -27,7 +27,9 @@ app.get('/', (req,res) => {
 app.get('/login', (req,res) => {
   res.render('login');
 });
-
+app.get('/feedback', (req, res) => {
+   res.render('feedback');
+});
 app.get('/dashboard', (req,res) => {
   res.render('dashboard');
 });
