@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
 <head>
     <style>
-        .width{
+        .width {
             width: 70%;
         }
     </style>
@@ -15,6 +15,7 @@
           integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css"
           integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
 
@@ -25,7 +26,7 @@
         <i class="home icon"></i>
         Home
     </a>
-    <a class="item">
+    <a href="/feedback" class="item">
         <i class="coffee icon"></i>
         Feedback
     </a>
@@ -52,27 +53,41 @@
             <div class="field">
                 <label>Send us a message</label>
                 <div class="width">
-                <textarea rows="3" id="area"></textarea>
+                    <textarea rows="3" id="area"></textarea>
                 </div>
             </div>
             <script>
-                var switchState = function(){
-                    document.getElementById("msg").hidden= false;
-                    document.getElementById("area").value="";
+                var switchState = function () {
+//                    if ($("area").val() === "") {
+//                        console.log("got here");
+//                        document.getElementById("msgError").hidden = false;
+//
+//                    } else{
+//                        document.getElementById("msgError").hidden = true;
+                        document.getElementById("msg").hidden = false;
+                        document.getElementById("area").value = "";
+             //      }
                 }
             </script>
             <div class="ui button" tabindex="0" onclick="switchState()">Submit</div>
             <br>
             <br>
+            <div class="ui form" hidden="true" id="msgError">
+                <div class="width">
+                    <div class="ui message">
+                        <div class="header">Your message was empty. Did not send!</div>
+                    </div>
+                </div>
+            </div>
             <div class="ui form" hidden="true" id="msg">
                 <div class="width">
-                <div class="ui message">
-                    <div class="header">Your message successfully sent!</div>
-                    <ul class="list">
-                        <li>Please allow up to 2 days for response time.</li>
-                        <li>Any vulgar messages will result in an IP-ban.</li>
-                    </ul>
-                </div>
+                    <div class="ui message">
+                        <div class="header">Your message successfully sent!</div>
+                        <ul class="list">
+                            <li>Please allow up to 2 days for response time.</li>
+                            <li>Any vulgar messages will result in an IP-ban.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
