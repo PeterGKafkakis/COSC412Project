@@ -12,6 +12,7 @@ const expressValidator = require('express-validator');
 require('./models/User');
 require('./services/passport');
 
+
 mongoose.connect(keys.mongoURI);
 
 const app = express();
@@ -77,8 +78,6 @@ app.post('/contact', (request, response) => {
   var message = ""
   var htmlArray = [];
 
-
-
   for(var i =0; i < 3; i++)
   {
     if(i == 0)
@@ -135,6 +134,7 @@ app.use(
     keys: [keys.cookieKey]
   })
 );
+
 app.use(passport.initialize());
 app.use(passport.session());
 
