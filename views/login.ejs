@@ -42,7 +42,7 @@
         <p>Fill out the form below to login </p>
         <p><i class="book extra large icon"></i></p>
       </div>
-      <form  action="/auth/local" method="post" class="ui form attached fluid segment">
+      <form action="/auth/local" method="post" class="ui form attached fluid segment">
         <div class="field">
           <label><span class="size">Email</span></label>
           <input placeholder="School Email @students.towson.edu" type="text" class="form-control" name="email">
@@ -54,11 +54,13 @@
         <div class="field">
         </div>
         <div class="wrapper">
-          <a href="/dashboard" type="submit" class="ui blue submit button"> Login </a>
+            <button class="ui blue button" type="submit">Login</button>
 
-          <p id="googlePadding">
-            <a href="/auth/google" type="submit" class="ui blue submit button">Login With Google</a>
-          </p>
+          <div class="ui center aligned">
+            <a href="/auth/google" type="submit" class="ui blue fluid submit orange button">Login With Google</a>
+          </div>
+
+
 
         </div>
       </form>
@@ -87,7 +89,7 @@
             <a href="https://www.facebook.com/collegeadvisorproject" target="_blank"><i class="fab fa-facebook-f fa-3x"></i></a>
             <a href="https://plus.google.com/114965583372651654240" target="_blank"><i class="fab fa-google fa-3x"></i></a>
             <a href="https://twitter.com/" target="_blank"> <i class="fab fa-twitter fa-3x"></i></a>
-            </div>
+          </div>
         </div>
         <p>&copy; 2018 Team Fabulous</p>
 
