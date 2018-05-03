@@ -50,7 +50,7 @@ WOWZA Advisor
     <form method="post" action="feedback" class="ui form">
         <div class="ui form">
             <div class="fields">
-                <div class="field" id="dis1">
+                <div class="field" id="dis1" onchange="check(id)">
                     <label>First name</label>
                     <input type="text" placeholder="First Name">
                 </div>
@@ -64,7 +64,23 @@ WOWZA Advisor
                 </div>
             </div>
         </div>
+        <div class="ui form error" hidden="true" id="error">
+            <div class="ui error message" >
+                <div class="header">Action Forbidden</div>
+                <p>Your name cannot contain any numbers, or be empty!!</p>
+            </div>
+            <div class="ui submit button">Submit</div>
+        </div>
         <script>
+            var hasNumber = function(string) {
+                return /\d/.test(string);
+            }
+            var check = (id) => {
+                if(document.getElementById(id).value = "" || hasNumber(document.getElementById(id)))
+                    document.getElementById("error").hidden = false;
+                else
+                    document.getElementById("error").hidden = true;
+            }
             var anonymous = function(){
                 document.getElementById("dis1").hidden = !document.getElementById("dis1").hidden;
                 document.getElementById("dis2").hidden = !document.getElementById("dis2").hidden;
