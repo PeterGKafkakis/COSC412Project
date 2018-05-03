@@ -46,7 +46,38 @@
 
 
 <div class="ui raised very padded text container segment">
-
+    <form class="ui form">
+        <div class="ui form">
+            <div class="fields">
+                <div class="field" id="dis1">
+                    <label>First name</label>
+                    <input type="text" placeholder="First Name">
+                </div>
+                <div class="field" id="dis2">
+                    <label>Middle name</label>
+                    <input type="text" placeholder="Middle Name">
+                </div>
+                <div class="field" id="dis3">
+                    <label>Last name</label>
+                    <input type="text" placeholder="Last Name">
+                </div>
+            </div>
+        </div>
+        <script>
+            var anonymous = function(){
+                document.getElementById("dis1").hidden = !document.getElementById("dis1").hidden;
+                document.getElementById("dis2").hidden = !document.getElementById("dis2").hidden;
+                document.getElementById("dis3").hidden = !document.getElementById("dis3").hidden;
+            }
+        </script>
+        <div class="field">
+            <div class="ui checkbox" onclick="anonymous()">
+                <input type="checkbox" tabindex="0">
+                <label>I wish to remain anonymous.</label>
+            </div>
+        </div>
+        <button class="ui button" type="submit">Submit</button>
+    </form>
 
 </div>
 <div class="ui blue inverted very padded segment">
