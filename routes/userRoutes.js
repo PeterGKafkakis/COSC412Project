@@ -35,7 +35,6 @@ module.exports = (app) => {
                     User.createUser(newUser, (err, user) => {
                         if (err) throw err;
                         console.log(user);
-
                     });
                 }
             });
