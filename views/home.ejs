@@ -42,24 +42,27 @@
         <p>Fill out the form below to sign-up for a new account</p>
         <p><i class="book extra large icon"></i></p>
       </div>
-      <form method="post" class="ui form attached fluid segment">
+
+
+
+      <form method="post" action ="/register" class="ui form attached fluid segment">
         <div class="two fields">
           <div class="field">
             <label><span class="size">First Name</span></label>
-            <input placeholder="First Name" type="text">
+            <input placeholder="First Name" type="text" class="form-control" name="fName">
           </div>
           <div class="field">
             <label><span class="size">Last Name</span></label>
-            <input placeholder="Last Name" type="text">
+            <input placeholder="Last Name" type="text" class="form-control" name="lName">
           </div>
         </div>
         <div class="field">
           <label><span class="size">Email</span></label>
-          <input placeholder="School Email @students.towson.edu" type="text">
+          <input placeholder="School Email @students.towson.edu" type="text" class="form-control" name="email">
         </div>
         <div class="field">
           <label><span class="size">Password</span></label>
-          <input type="password">
+          <input type="password" class="form-control" name="password">
         </div>
         <div class="field">
           <label><span class="size">Major</span></label>
@@ -75,7 +78,7 @@
               <label for="terms">I agree to the terms and conditions</label>
             </div>
           </div>
-          <div class="ui blue submit button">Submit</div>
+          <button type="submit" class="ui blue submit button">Submit</button>
         </div>
       </form>
       <div class="ui bottom attached warning message">
