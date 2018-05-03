@@ -50,12 +50,14 @@
     <div align="center">
 
       <div class="ui form">
+        <form method="POST" action="/contact">
         <div class="field">
           <label>Send us a message</label>
           <div class="width">
-            <textarea rows="3" id="area"></textarea>
+            <textarea name="areaInput" rows="3">  </textarea>
           </div>
         </div>
+
         <script>
           var switchState = function() {
             //                    if ($("area").val() === "") {
@@ -69,7 +71,7 @@
             //      }
           }
         </script>
-        <div class="ui button" tabindex="0" onclick="switchState()">Submit</div>
+        <button type="submit" class="ui button" tabindex="0" onclick="switchState()">Submit</button>
         <br>
         <br>
         <div class="ui form" hidden="true" id="msgError">
@@ -90,7 +92,9 @@
             </div>
           </div>
         </div>
+        </form>
       </div>
+
       <br>
       <br>
       <div class="content">

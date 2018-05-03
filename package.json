@@ -21,6 +21,7 @@
     "express-session": "^1.15.6",
     "express-validator": "^5.1.2",
     "mongoose": "^5.0.16",
+    "nodemailer-juice": "^1.0.0",
     "nodemon": "^1.17.3",
     "passport": "^0.4.0",
     "passport-google-oauth2": "^0.1.6",

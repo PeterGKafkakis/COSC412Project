@@ -563,7 +563,7 @@
         <div class="ui buttons">
           <button type="button" disabled class="ui button">Save</button>
           <div class="or"></div>
-          <button  type="button" onclick="dashData()" class="ui blue button">Submit</button>
+          <button type="button" onclick="dashData()" class="ui blue button">Submit</button>
         </div>
       </div>
     </form>
@@ -591,8 +591,6 @@
       var credits = [4, 4, 4, 4, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 3, 4, 3, 3, 3, 3, 3, 3, 4, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 4, 4, 3, 3, 3, 3];
       console.log(credits.length); //check
       var creditCount = 0;
-
-
 
       for (var i = 0; i < 46; i++) {
 
@@ -639,6 +637,40 @@
       tuitionCost = tuitionCost + remainingCount;
 
       console.log("Tuition Cost " + semesterCount + " 1/2 " + " semesters is " + tuitionCost.toFixed(2));
+
+      // NODE MAILER IN PROGRESSSS
+
+      var nodemailer = require('nodemailer');
+
+
+      let transporter = nodemailer.createTransport({
+        service: 'gmail',
+        secure: false,
+        port: 25,
+        auth: {
+          user: 'stefanoskafkakis123@gmail.com',
+          pass: 'Towson123$'
+        },
+        tls: {
+          rejectUnauthorized: false
+        }
+      });
+
+      let HelperOptions = {
+        from: '"Peter Kafkakis" <stefanoskafkakis123@gmail.com',
+        to: 'stefanoskafkakis123@gmail.com',
+        subject: 'Test',
+        html: "hello"
+
+      };
+
+      transporter.sendMail(HelperOptions, (error, info) => {
+        if (error) {
+          return console.log(error);
+        }
+        console.log("The message was sent!");
+        console.log(info);
+      });
     }
   </script>
 
