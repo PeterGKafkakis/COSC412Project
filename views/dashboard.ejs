@@ -547,7 +547,7 @@
             <tr id="row45" class="center aligned">
               <td>
                 <div class="ui center checkbox">
-                  <input type="checkbox" checked name="course" value="ENGL317" id="course45">
+                  <input type="checkbox" name="course" value="ENGL317" id="course45">
                   <label></label>
                 </div>
               </td>
@@ -558,12 +558,12 @@
           </tbody>
         </table>
       </div>
-      <input type="button" value="Submit" onclick="dashData()">
+
       <div class="center">
         <div class="ui buttons">
-          <button class="ui button">Save</button>
+          <button type="button" disabled class="ui button">Save</button>
           <div class="or"></div>
-          <button onclick="dashData()" class="ui blue button">Submit</button>
+          <button  type="button" onclick="dashData()" class="ui blue button">Submit</button>
         </div>
       </div>
     </form>
@@ -589,8 +589,9 @@
   <script type="text/javascript">
     var dashData = function() {
       var credits = [4, 4, 4, 4, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 3, 4, 3, 3, 3, 3, 3, 3, 4, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 4, 4, 3, 3, 3, 3];
-      console.log(credits.length);
+      console.log(credits.length); //check
       var creditCount = 0;
+
 
 
       for (var i = 0; i < 46; i++) {
@@ -610,7 +611,9 @@
       // Core 5 and 7 and 8 and 9 and 14
       // 3, 3, 3,  21
       console.log(creditCount);
+
       creditCount = creditCount + 21;
+
       console.log(120 - creditCount + " Credits Remaining");
       creditsLeft = 120 - creditCount;
 
@@ -635,7 +638,7 @@
       remainingCount = remainingCount * 300;
       tuitionCost = tuitionCost + remainingCount;
 
-      console.log("Total Cost For " + semesterCount + " 1/2 " + " semesters is " + tuitionCost.toFixed(2));
+      console.log("Tuition Cost " + semesterCount + " 1/2 " + " semesters is " + tuitionCost.toFixed(2));
     }
   </script>
 
