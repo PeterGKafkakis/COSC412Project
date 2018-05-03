@@ -49,9 +49,13 @@
   <div class="ui raised very padded text container segment">
     <h2 class="ui header">Contact us!</h2>
     <div align="center">
-
+    <script>
+      var redirect = function(){
+          window.location="/dashboard";
+      }
+    </script>
       <div class="ui form">
-        <form method="POST" action="contact">
+        <form method="POST" action="contact" >
         <div class="field">
           <label>Send us a message</label>
           <div class="width">
@@ -68,7 +72,12 @@
             //                    } else{
             //                        document.getElementById("msgError").hidden = true;
             document.getElementById("msg").hidden = false;
-            document.getElementById("area").value = "";
+            try {
+                document.getElementById("area").value = "";
+            }catch(err){
+                //console.log(err);
+            }
+            redirect();
             //      }
           }
         </script>
