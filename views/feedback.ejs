@@ -89,23 +89,15 @@
             <label>Did you find this website visually appealing?</label>
             <textarea rows="2"></textarea>
         </div>
-        <div class="ui form">
-            <div class="field">
-                <label>How likely are you to refer this to a friend?</label>
-                <div class="ui selection dropdown">
-                    <input name="referral">
-                    <i class="dropdown icon"></i>
-                    <div class="default text">How likely...?</div>
-                    <div class="menu">
-                        <div class="item" data-value="1">Highly unlikely</div>
-                        <div class="item" data-value="0">Unlikely</div>
-                        <div class="item" data-value="2">Not sure</div>
-                        <div class="item" data-value="3">Likely</div>
-                        <div class="item" data-value="4">Highly likely</div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <select class="ui search fluid dropdown">
+            <option value="">How Likely...? </option>
+            <option value="0">Highly unlikely</option>
+            <option value="1">Unlikely</option>
+            <option value="2">Not sure</option>
+            <option value="3">Likely</option>
+            <option value="4">Highly likely</option>
+        </select>
+        <br>
         <button class="ui button" type="submit">Submit</button>
     </form>
 
@@ -115,7 +107,7 @@
 
         <p><i class="fas fa-graduation-cap fa-3x"></i></p>
 
-        <p>MAKING ADVISING EASY FOR STUDENTS </p>
+        <p>MAKING ADVISING EASY FOR STUDENTS</p>
 
         <div class="containerLogo">
           <a href="https://www.facebook.com/collegeadvisorproject" target="_blank"><i class="fab fa-facebook-f fa-3x"></i></a>

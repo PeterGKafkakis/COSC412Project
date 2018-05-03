@@ -63,9 +63,6 @@ app.get('/contact', (req,res) => {
   res.render('contact');
 });
 
-app.get('/feedback', (req,res) => {
-  res.render('feedback');
-});
 
 app.use(
   cookieSession({
