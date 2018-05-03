@@ -28,6 +28,11 @@
     max-height: 400px;
     overflow-y: scroll;
 }
+.containerLogo > a{
+  color: white;
+}
+
+
 
 .header > p {
   text-align: center;
@@ -52,6 +57,7 @@ margin: 0 auto;
 
 #googlePadding{
   padding: 20px;
+  color: yellow;
 }
 
 #googleHeader

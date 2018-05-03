@@ -1,27 +1,27 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
-    <style>
-        .width {
-            width: 70%;
-        }
-    </style>
-    <meta charset="utf-8">
-    <title>Course Advisor</title>
+  <style>
+    .width {
+      width: 70%;
+    }
+  </style>
+  <meta charset="utf-8">
+  <title>Course Advisor</title>
 
-    <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css"
-          integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css"
-          integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
 
 </head>
+
 <body>
-<div class="ui tiny attached menu">
+  <div class="ui tiny attached menu">
     <a href="/" class="active item">
         <i class="home icon"></i>
         Home
@@ -37,94 +37,94 @@
         <i class="facebook messenger large icon"></i>
         Message 24/7 </a>
     <div class="right menu">
-        <div class="item">
-            <a href="/api/logout" class="ui primary button">Logout</a>
-        </div>
+      <div class="item">
+        <a href="/api/logout" class="ui primary button">Logout</a>
+      </div>
 
     </div>
-</div>
+  </div>
 
 
-<div class="ui raised very padded text container segment">
+  <div class="ui raised very padded text container segment">
     <h2 class="ui header">Contact us!</h2>
     <div align="center">
 
-        <div class="ui form">
-            <div class="field">
-                <label>Send us a message</label>
-                <div class="width">
-                    <textarea rows="3" id="area"></textarea>
-                </div>
-            </div>
-            <script>
-                var switchState = function () {
-//                    if ($("area").val() === "") {
-//                        console.log("got here");
-//                        document.getElementById("msgError").hidden = false;
-//
-//                    } else{
-//                        document.getElementById("msgError").hidden = true;
-                        document.getElementById("msg").hidden = false;
-                        document.getElementById("area").value = "";
-             //      }
-                }
-            </script>
-            <div class="ui button" tabindex="0" onclick="switchState()">Submit</div>
-            <br>
-            <br>
-            <div class="ui form" hidden="true" id="msgError">
-                <div class="width">
-                    <div class="ui message">
-                        <div class="header">Your message was empty. Did not send!</div>
-                    </div>
-                </div>
-            </div>
-            <div class="ui form" hidden="true" id="msg">
-                <div class="width">
-                    <div class="ui message">
-                        <div class="header">Your message successfully sent!</div>
-                        <ul class="list">
-                            <li>Please allow up to 2 days for response time.</li>
-                            <li>Any vulgar messages will result in an IP-ban.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+      <div class="ui form">
+        <div class="field">
+          <label>Send us a message</label>
+          <div class="width">
+            <textarea rows="3" id="area"></textarea>
+          </div>
         </div>
+        <script>
+          var switchState = function() {
+            //                    if ($("area").val() === "") {
+            //                        console.log("got here");
+            //                        document.getElementById("msgError").hidden = false;
+            //
+            //                    } else{
+            //                        document.getElementById("msgError").hidden = true;
+            document.getElementById("msg").hidden = false;
+            document.getElementById("area").value = "";
+            //      }
+          }
+        </script>
+        <div class="ui button" tabindex="0" onclick="switchState()">Submit</div>
         <br>
         <br>
-        <div class="content">
-            <i class="mail icon"></i><a href="mailto:cosc412webdevgroup.com">COSC412WebDevGroup@gmail.com</a>
+        <div class="ui form" hidden="true" id="msgError">
+          <div class="width">
+            <div class="ui message">
+              <div class="header">Your message was empty. Did not send!</div>
+            </div>
+          </div>
         </div>
-
-        <p></p>
-        <p></p>
-
-
-        <div class="content">
-            <i class="users icon"></i> COSC412 Website Developing Group
+        <div class="ui form" hidden="true" id="msg">
+          <div class="width">
+            <div class="ui message">
+              <div class="header">Your message successfully sent!</div>
+              <ul class="list">
+                <li>Please allow up to 2 days for response time.</li>
+                <li>Any vulgar messages will result in an IP-ban.</li>
+              </ul>
+            </div>
+          </div>
         </div>
+      </div>
+      <br>
+      <br>
+      <div class="content">
+        <i class="mail icon"></i><a href="mailto:cosc412webdevgroup.com">COSC412WebDevGroup@gmail.com</a>
+      </div>
 
-        <p></p>
-        <p></p>
-        <div class="content">
-            <i class="marker icon"></i> Towson University, MD
-        </div>
+      <p></p>
+      <p></p>
+
+
+      <div class="content">
+        <i class="users icon"></i> COSC412 Website Developing Group
+      </div>
+
+      <p></p>
+      <p></p>
+      <div class="content">
+        <i class="marker icon"></i> Towson University, MD
+      </div>
 
     </div>
-</div>
-</div>
-<div class="ui blue inverted very padded segment">
+  </div>
+
+  <div class="ui blue inverted very padded segment">
     <div class="containerLogo">
 
-        <p><i class="fas fa-graduation-cap fa-3x"></i></p>
+      <p><i class="fas fa-graduation-cap fa-3x"></i></p>
 
-        <p>MAKING ADVISING EASY FOR STUDENTS </p>
+      <p>MAKING ADVISING EASY FOR STUDENTS </p>
 
-        <div class="containerLogo">
-            <p><i class="fab fa-facebook-f fa-3x"></i></p>
-            <p><i class="fab fa-google fa-3x"></i></p>
-            <p><i class="fab fa-twitter fa-3x"></i></p>
+      <div class="containerLogo">
+        <a href="https://www.facebook.com/collegeadvisorproject" target="_blank"><i class="fab fa-facebook-f fa-3x"></i></a>
+        <a href="https://www.towson.edu/academicadvising/" target="_blank"><i class="fab fa-google fa-3x"></i></a>
+        <a href="https://twitter.com/" target="_blank"> <i class="fab fa-twitter fa-3x"></i></a>
         </div>
     </div>
     <p>&copy; 2018 Team Fabulous</p>
