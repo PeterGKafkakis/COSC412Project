@@ -22,7 +22,10 @@
 </head>
 <body>
 <div class="ui tiny attached menu">
-    <a href="/" class="active item">
+  <div class="header item">
+WOWZA Advisor
+</div>
+    <a href="/" class="item">
         <i class="home icon"></i>
         Home
     </a>
@@ -33,9 +36,7 @@
     <a class="item">
         <i class="facebook large icon"></i>
         Facebook Page</a>
-    <a class="item">
-        <i class="facebook messenger large icon"></i>
-        Message 24/7 </a>
+
     <div class="right menu">
         <div class="item">
             <a href="/api/logout" class="ui primary button">Logout</a>
@@ -46,7 +47,7 @@
 
 
 <div class="ui raised very padded text container segment">
-    <form class="ui form">
+    <form method="post" action="feedback" class="ui form">
         <div class="ui form">
             <div class="fields">
                 <div class="field" id="dis1">
@@ -79,26 +80,28 @@
 
         <div class="field">
             <label>What did you like most about this website?</label>
-            <textarea rows="2"></textarea>
+            <textarea name="area1" rows="2"></textarea>
         </div>
         <div class="field">
             <label>What do you think can be improved on this website?</label>
-            <textarea rows="2"></textarea>
+            <textarea name="area2" rows="2"></textarea>
         </div>
         <div class="field">
             <label>Did you find this website visually appealing?</label>
-            <textarea rows="2"></textarea>
+            <textarea name="area3" rows="2"></textarea>
         </div>
-        <select class="ui search fluid dropdown">
+        <select name="area4" class="ui search fluid dropdown">
             <option value="">How Likely...? </option>
-            <option value="0">Highly unlikely</option>
-            <option value="1">Unlikely</option>
-            <option value="2">Not sure</option>
-            <option value="3">Likely</option>
-            <option value="4">Highly likely</option>
+            <option value="Highly Unlikely">Highly unlikely</option>
+            <option value="Unlikely">Unlikely</option>
+            <option value="Not Sure">Not sure</option>
+            <option value="Likely">Likely</option>
+            <option value="Highly Likely">Highly likely</option>
         </select>
         <br>
-        <button class="ui button" type="submit">Submit</button>
+        <div class="ui center aligned">
+        <button class="ui blue button" type="submit">Submit</button>
+      </div>
     </form>
 
 </div>

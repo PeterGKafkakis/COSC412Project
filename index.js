@@ -67,9 +67,80 @@ app.get('/contact', (req, res) => {
   res.render('contact');
 });
 
+app.post('/feedback', (request, response) => {
+var text1 = request.body.area1;
+var text2 = request.body.area2;
+var text3 = request.body.area3;
+var text4 = request.body.area4;
+
+console.log(text1);
+console.log(text2);
+console.log(text3);
+console.log(text4);
+
+var message = ""
+var htmlArray = [];
+
+for(var i =0; i < 5; i++)
+{
+  if(i == 0)
+  {
+    message = "<h1>" + "Feedback: " + " <h1>"
+    htmlArray.push(message)
+  }
+  if(i==1){
+    message = "<h2>" + " What The User Liked Most About Our Site: " + text1 + "</h2>"
+    htmlArray.push(message)
+  }
+
+  if(i==2){
+     message = "<h2> " + " How can we improve: " + text2 + "</h2>"
+     htmlArray.push(message)
+  }
+  if(i==3){
+     message = "<h2> " + "How Visually Appealing Our Website Is: "+ text3 + "</h2>"
+     htmlArray.push(message)
+  }
+  if(i==4){
+     message = "<h2> " + "How Likely They Are To Use Us Again: "+ text4 + "</h2>"
+     htmlArray.push(message)
+  }
+}
+
+htmlArray = htmlArray.toString();
+
+let transporter = nodemailer.createTransport({
+  service: 'gmail',
+  secure: false,
+  port: 25,
+  auth: {
+    user: 'stefanoskafkakis123@gmail.com',
+    pass: 'Towson123$'
+  },
+  tls: {
+    rejectUnauthorized: false
+  }
+});
+
+let HelperOptions = {
+
+  from: '"Peter Kafkakis" <petergkafkakis@gmail.com',
+  to: 'petergkafkakis@gmail.com',
+  subject: 'Feedback For WOWZA',
+  html: htmlArray
+};
+
+transporter.sendMail(HelperOptions, (error, info) => {
+  if (error) {
+    return console.log(error);
+  }
+  console.log("The message was sent!");
+  console.log(info);
+});
+});
+
 
 // Count Number of Tickets Users Have Created
-
 var count = 0;
 app.post('/contact', (request, response) => {
   var postBody = request.body.areaInput;
