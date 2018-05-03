@@ -28,7 +28,9 @@
     max-height: 400px;
     overflow-y: scroll;
 }
-
+a{
+  color: white;
+}
 .header > p {
   text-align: center;
 }
