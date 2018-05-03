@@ -32,7 +32,16 @@
   color: white;
 }
 
+#tuition{
+  text-align: center;
+}
 
+#creditsLeft{
+  text-align: center;
+}
+#centerButton{
+  text-align: center; 
+}
 
 .header > p {
   text-align: center;

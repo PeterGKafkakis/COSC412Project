@@ -47,6 +47,11 @@
 
   <div class="ui raised very padded text container segment">
     <h2 class="ui header">College Advisor</h2>
+    <div class="ui center aligned">
+    <button id="centerButton" type="button" class="ui primary center button" onclick="window.location.reload()">
+  Restart
+</button>
+</div>
     <h2 class="ui header blue"><u> Computer Science Major </u> </h2>
 
 
@@ -567,6 +572,64 @@
         </div>
       </div>
     </form>
+    <script type="text/javascript">
+      var dashData = function() {
+        var credits = [4, 4, 4, 4, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 3, 4, 3, 3, 3, 3, 3, 3, 4, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 4, 4, 3, 3, 3, 3];
+        console.log(credits.length); //check
+        var creditCount = 0;
+
+        for (var i = 0; i < 46; i++) {
+
+          var id = "course" + i;
+          var rowid = "row" + i;
+
+          if (document.getElementById(id).checked) {
+            creditCount = creditCount + credits[i];
+
+            document.getElementById(rowid).remove();
+          }
+          if (rowid === "row9") {
+            document.getElementById("row100").remove();
+          }
+        }
+        // Core 5 and 7 and 8 and 9 and 14
+        // 3, 3, 3,  21
+        console.log(creditCount);
+
+        creditCount = creditCount + 21;
+
+        console.log(120 - creditCount + " Credits Remaining");
+        creditsLeft = 120 - creditCount;
+        var outRemainingCredit = creditsLeft;
+        var remainingCount = 0;
+
+        while (creditsLeft % 15 != 0) {
+          creditsLeft--;
+          console.log(creditsLeft);
+          remainingCount++;
+        }
+
+        var tuitionCost = 5000;
+        var tuitionStart = 5000;
+        var semesterCount = 0;
+
+        for (var i = 0; i < creditsLeft / 15; i++) {
+          tuitionCost = (tuitionCost * .05) + (tuitionStart * (i + 1));
+          console.log(tuitionCost); //250
+          semesterCount++;
+        }
+
+        remainingCount = remainingCount * 300;
+        tuitionCost = tuitionCost + remainingCount;
+        document.getElementById('tuition').innerHTML ="Tuition Cost For " + semesterCount + " 1/2 " + " semesters is $" + tuitionCost.toFixed(2) +"<br>" + "<p>" + "(Based on 15 Credit Semesters)" + "</p>";
+        document.getElementById('creditsLeft').innerHTML ="Credits Remaining: " + outRemainingCredit;
+        console.log("Tuition Cost " + semesterCount + " 1/2 " + " semesters is " + tuitionCost.toFixed(2)); //test in console for correct output
+      }
+    </script>
+
+
+ <h3 id="tuition"></h3>
+ <h3 id="creditsLeft"></h3>
 
   </div>
   <div class="ui blue inverted very padded segment">
@@ -586,58 +649,7 @@
 
   </div>
 
-  <script type="text/javascript">
-    var dashData = function() {
-      var credits = [4, 4, 4, 4, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 3, 4, 3, 3, 3, 3, 3, 3, 4, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 4, 4, 3, 3, 3, 3];
-      console.log(credits.length); //check
-      var creditCount = 0;
 
-      for (var i = 0; i < 46; i++) {
-
-        var id = "course" + i;
-        var rowid = "row" + i;
-
-        if (document.getElementById(id).checked) {
-          creditCount = creditCount + credits[i];
-
-          document.getElementById(rowid).remove();
-        }
-        if (rowid === "row9") {
-          document.getElementById("row100").remove();
-        }
-      }
-      // Core 5 and 7 and 8 and 9 and 14
-      // 3, 3, 3,  21
-      console.log(creditCount);
-
-      creditCount = creditCount + 21;
-
-      console.log(120 - creditCount + " Credits Remaining");
-      creditsLeft = 120 - creditCount;
-
-      var remainingCount = 0;
-
-      while (creditsLeft % 15 != 0) {
-        creditsLeft--;
-        console.log(creditsLeft);
-        remainingCount++;
-      }
-
-      var tuitionCost = 5000;
-      var tuitionStart = 5000;
-      var semesterCount = 0;
-
-      for (var i = 0; i < creditsLeft / 15; i++) {
-        tuitionCost = (tuitionCost * .05) + (tuitionStart * (i + 1));
-        console.log(tuitionCost); //250
-        semesterCount++;
-      }
-
-      remainingCount = remainingCount * 300;
-      tuitionCost = tuitionCost + remainingCount;
-
-      console.log("Tuition Cost " + semesterCount + " 1/2 " + " semesters is " + tuitionCost.toFixed(2));
-  </script>
 
 
 
