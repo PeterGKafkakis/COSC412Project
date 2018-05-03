@@ -74,7 +74,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 require('./routes/authRoutes')(app);
-require('./routes/registerRoutes')(app);
+require('./routes/userRoutes')(app);
 //test comment for github
 
 //What Cloud Server Will Use or default port 5000 on Local Machine

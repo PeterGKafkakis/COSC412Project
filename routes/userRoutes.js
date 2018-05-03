@@ -19,7 +19,7 @@ module.exports = (app) => {
         var errors = req.validationErrors();
 
         if (errors) {
-            alert(errors);
+            
         } else {
             let newUser = new User({
                 fName: fName,
@@ -28,11 +28,17 @@ module.exports = (app) => {
                 password: password,
             });
 
-            User.createUser(newUser, (err, user) => {
-                if (err) throw err;
-                console.log(user);
+            User.getByEmail(email, (err, user) =>{
+                if(err) throw err;
+                if(!user){
+                
+                    User.createUser(newUser, (err, user) => {
+                        if (err) throw err;
+                        console.log(user);
+                
+                    });
+                }
             });
-
 
             res.redirect('/login');
         }

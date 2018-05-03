@@ -42,20 +42,20 @@
         <p>Fill out the form below to login </p>
         <p><i class="book extra large icon"></i></p>
       </div>
-      <form  action="/dashboard" method="post" class="ui form attached fluid segment">
+      <form  action="/auth/local" method="post" class="ui form attached fluid segment">
 
         <div class="field">
           <label><span class="size">Email</span></label>
-          <input placeholder="School Email @students.towson.edu" type="text">
+          <input placeholder="School Email @students.towson.edu" type="text" class="form-control" name="email">
         </div>
         <div class="field">
           <label><span class="size">Password</span></label>
-          <input type="password">
+          <input type="password" class="form-control" name="password">
         </div>
         <div class="field">
         </div>
         <div class="wrapper">
-          <div class="ui blue submit button">Login</div>
+          <button type="submit" class="ui blue submit button">Login</button>
 
           <p id="googlePadding">
             <a href="/auth/google" class="ui blue submit button">Login With Google</a>
